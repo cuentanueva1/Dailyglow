@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Daily Glow — maquillaje y belleza. Comprá online y hacé tu pedido por WhatsApp.">
+  <title>Daily Glow — Maquillaje & belleza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>✨ Belleza para todos los días</span>
+      <div class="toplinks">
+        <a href="#inicio">Inicio</a><a href="#productos">Productos</a><a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio">Daily glow</a>
+      <nav class="mainnav">
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+        <span>Carrito</span><b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">MAKEUP • BEAUTY • GLOW</p>
+        <h1>Daily <span>GLOW</span></h1>
+        <p>Todo lo que necesitás para sentirte increíble, todos los días.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#productos">Ver productos</a>
+          <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/5491158602204?text=Hola%20Daily%20Glow%20%F0%9F%8C%B8%20Quiero%20consultar%20por%20un%20producto.">WhatsApp</a>
+        </div>
+      </div>
+      <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div><div class="sparkle s3">✦</div>
+    </section>
+
+    <section class="welcome section">
+      <div class="container welcome-grid">
+        <div class="welcome-image">
+          <img src="assets/hero-products.jpg" alt="Productos de Daily Glow">
+        </div>
+        <div class="welcome-copy">
+          <p class="eyebrow">Bienvenida a Daily Glow</p>
+          <h2>Brillá a tu manera.</h2>
+          <p>Somos apasionadas por el maquillaje y el cuidado personal. Explorá nuestro catálogo y encontrá tus favoritos.</p>
+          <a class="text-link" target="_blank" rel="noopener" href="https://wa.me/5491158602204?text=Hola%20Daily%20Glow%20%F0%9F%8C%B8%20Quiero%20hacer%20una%20consulta.">Contactanos →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories" id="categorias">
+      <div class="container">
+        <div class="section-title"><p class="eyebrow">Descubrí</p><h2>Catálogo</h2></div>
+        <div class="category-grid">
+          <button class="category-card" data-category="Ojos"><img src="assets/cat-ojos.jpg" alt=""><span>Ojos</span></button>
+          <button class="category-card" data-category="Rubor"><img src="assets/cat-rubor.jpg" alt=""><span>Rubor</span></button>
+          <button class="category-card" data-category="Iluminador"><img src="assets/cat-iluminador.jpg" alt=""><span>Iluminador</span></button>
+          <button class="category-card" data-category="Bases"><img src="assets/cat-bases.jpg" alt=""><span>Bases</span></button>
+          <button class="category-card" data-category="Labiales"><img src="assets/cat-labiales.jpg" alt=""><span>Labiales</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo section">
+      <div class="container promo-grid">
+        <div class="promo-card promo-one">
+          <span>Tu momento</span><strong>de brillar ✨</strong>
+        </div>
+        <div class="promo-card promo-two">
+          <span>Nuevas</span><strong>ofertas</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section section" id="productos">
+      <div class="container">
+        <div class="section-title centered">
+          <p class="eyebrow">Elegí tus favoritos</p>
+          <h2>Productos</h2>
+          <p class="section-subtitle">Precios actualizados • Envíos/entrega a coordinar por WhatsApp</p>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="Todos">Todos</button>
+          <button class="filter" data-filter="Ojos">Ojos</button>
+          <button class="filter" data-filter="Iluminador">Iluminador</button>
+          <button class="filter" data-filter="Bases">Bases</button>
+          <button class="filter" data-filter="Labiales">Labiales</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+      <div class="decor decor-left">♡</div><div class="decor decor-right">✦</div>
+    </section>
+
+    <section class="payment section">
+      <div class="container payment-card">
+        <div>
+          <p class="eyebrow">Medios de pago</p>
+          <h2>Pagá fácil con Mercado Pago</h2>
+          <p>Alias / usuario de Mercado Pago: <strong>dailyglow.mp</strong></p>
+        </div>
+        <button class="btn btn-outline" id="copyMP">Copiar dato</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="#inicio">✦ Daily glow ✦</a>
+        <p>Creado para hacerte brillar todos los días.</p>
+      </div>
+      <div>
+        <h3>Atención al cliente</h3>
+        <p>Lunes a viernes · 9 a 18 hs.</p>
+        <div class="socials">
+          <a target="_blank" rel="noopener" href="https://wa.me/5491158602204">WhatsApp</a>
+          <a target="_blank" rel="noopener" href="https://instagram.com/daily.glow.ar">Instagram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p>WhatsApp: <a target="_blank" rel="noopener" href="https://wa.me/5491158602204">11 5860-2204</a></p>
+        <p>Instagram: <a target="_blank" rel="noopener" href="https://instagram.com/daily.glow.ar">@daily.glow.ar</a></p>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Daily Glow · Todos los derechos reservados.</div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito">
+    <div class="cart-head">
+      <div><p class="eyebrow">Tu selección</p><h2>Carrito</h2></div>
+      <button id="closeCart" class="close-btn" aria-label="Cerrar">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <span>🛍️</span><p>Tu carrito está vacío.</p><a href="#productos" id="goProducts">Ver productos</a>
+    </div>
+    <div class="cart-foot">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <p class="cart-note">El pedido se confirma por WhatsApp. Podés abonar por Mercado Pago con el dato <b>dailyglow.mp</b>.</p>
+      <a id="checkoutWhatsApp" class="btn btn-primary full" target="_blank" rel="noopener" href="#">Pedir por WhatsApp</a>
+      <button id="clearCart" class="clear-btn">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script>
+    const PRODUCTS = [{"id": "polvo-tejar", "name": "Polvo Tejar", "price": 3500, "cat": "Bases", "img": "polvo-tejar.jpg", "desc": "Polvo compacto para un acabado suave y prolijo."}, {"id": "eyeliner-million", "name": "Eyeliner Million Pauline", "price": 2800, "cat": "Ojos", "img": "eyeliner-million-pauline.jpg", "desc": "Delineado intenso y definido para destacar la mirada."}, {"id": "lapiz-melly", "name": "Lápiz Melly", "price": 2300, "cat": "Ojos", "img": "eyeliner-million-pauline.jpg", "desc": "Lápiz versátil para delinear y definir."}, {"id": "labial-tejar", "name": "Labial Tejar", "price": 2500, "cat": "Labiales", "img": "labial-tejar.jpg", "desc": "Color cómodo, pigmentado y fácil de llevar."}, {"id": "mascara-tei", "name": "Máscara pestañas Tei 2 en 1", "price": 3500, "cat": "Ojos", "img": "mascara-tei-2en1.jpg", "desc": "Máscara 2 en 1 para una mirada más intensa."}, {"id": "mascara-sheglam", "name": "Máscara pestañas Sheglam", "price": 3000, "cat": "Ojos", "img": "mascara-sheglam.jpg", "desc": "Define y realza las pestañas para un look glam."}, {"id": "contorno-iluminador", "name": "Contorno e iluminador 2 en 1", "price": 4000, "cat": "Iluminador", "img": "contorno-iluminador-2en1.jpg", "desc": "Dos pasos en uno para esculpir y aportar luz."}, {"id": "delineador-sirena", "name": "Delineador Sirena", "price": 2200, "cat": "Ojos", "img": "delineador-sirena.jpg", "desc": "Trazos precisos para crear looks creativos."}, {"id": "delineador-tei", "name": "Delineador Tei", "price": 3000, "cat": "Ojos", "img": "delineador-tei.jpg", "desc": "Delineado práctico para todos los días."}, {"id": "labial-pink21", "name": "Labial Pink 21", "price": 3200, "cat": "Labiales", "img": "labial-pink21.jpg", "desc": "Tono rosado para un acabado dulce y luminoso."}, {"id": "labial-tei", "name": "Labial Tei", "price": 3200, "cat": "Labiales", "img": "labial-tei.jpg", "desc": "Color intenso y cómodo para completar tu look."}];
+    const WA = "5491158602204";
+    let cart = JSON.parse(localStorage.getItem("dailyGlowCart") || "{}");
+    const $ = (s) => document.querySelector(s);
+    const money = n => "$" + n.toLocaleString("es-AR");
+
+    function save(){ localStorage.setItem("dailyGlowCart", JSON.stringify(cart)); renderCart(); }
+    function add(id){
+      cart[id] = (cart[id] || 0) + 1;
+      save();
+      showToast("¡Agregado al carrito! ✨");
+    }
+    function remove(id){
+      if(!cart[id]) return;
+      cart[id]--;
+      if(cart[id] <= 0) delete cart[id];
+      save();
+    }
+    function change(id, delta){
+      cart[id] = (cart[id] || 0) + delta;
+      if(cart[id] <= 0) delete cart[id];
+      save();
+    }
+    function renderProducts(filter="Todos"){
+      const list = filter === "Todos" ? PRODUCTS : PRODUCTS.filter(p => p.cat === filter);
+      $("#productGrid").innerHTML = list.map(p => `
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/${p.img}" alt="${p.name}">
+            <button class="quick-add" onclick="add('${p.id}')">+</button>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">${p.cat}</span>
+            <h3>${p.name}</h3>
+            <p>${p.desc}</p>
+            <div class="product-bottom">
+              <strong>${money(p.price)}</strong>
+              <button class="buy-btn" onclick="add('${p.id}')">Agregar</button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+    function renderCart(){
+      const entries = Object.entries(cart);
+      const totalQty = entries.reduce((a,[,q])=>a+q,0);
+      $("#cartCount").textContent = totalQty;
+      $("#cartEmpty").style.display = entries.length ? "none" : "flex";
+      $("#cartItems").style.display = entries.length ? "block" : "none";
+      let total=0;
+      $("#cartItems").innerHTML = entries.map(([id,q])=>{
+        const p=PRODUCTS.find(x=>x.id===id); if(!p) return "";
+        total += p.price*q;
+        return `<div class="cart-item">
+          <img src="assets/${p.img}" alt="">
+          <div class="cart-item-main"><h3>${p.name}</h3><strong>${money(p.price)}</strong>
+            <div class="qty"><button onclick="change('${id}',-1)">−</button><span>${q}</span><button onclick="change('${id}',1)">+</button></div>
+          </div>
+          <button class="remove" onclick="delete cart['${id}'];save()" aria-label="Eliminar">×</button>
+        </div>`;
+      }).join("");
+      $("#cartTotal").textContent = money(total);
+      const lines = entries.map(([id,q]) => {
+        const p=PRODUCTS.find(x=>x.id===id);
+        return `• ${p.name} x${q} — ${money(p.price*q)}`;
+      });
+      const msg = `Hola Daily Glow 🌸 Quiero hacer este pedido:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal: ${encodeURIComponent(money(total))}%0A%0AMercado Pago: dailyglow.mp`;
+      $("#checkoutWhatsApp").href = `https://wa.me/${WA}?text=${msg}`;
+    }
+    function showToast(t){
+      const el=$("#toast"); el.textContent=t; el.classList.add("show");
+      setTimeout(()=>el.classList.remove("show"),2200);
+    }
+    function openCart(){ $("#cartDrawer").classList.add("open"); $("#cartOverlay").classList.add("show"); document.body.classList.add("locked"); }
+    function closeCart(){ $("#cartDrawer").classList.remove("open"); $("#cartOverlay").classList.remove("show"); document.body.classList.remove("locked"); }
+
+    document.querySelectorAll(".filter").forEach(btn => btn.addEventListener("click", ()=>{
+      document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active"); renderProducts(btn.dataset.filter);
+    }));
+    document.querySelectorAll(".category-card").forEach(btn => btn.addEventListener("click", ()=>{
+      const cat = btn.dataset.category;
+      if(cat === "Rubor"){ showToast("Próximamente: Rubor ✨"); return; }
+      document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active", b.dataset.filter===cat || (cat==="Ojos" && b.dataset.filter==="Ojos")));
+      renderProducts(cat); document.querySelector("#productos").scrollIntoView({behavior:"smooth"});
+    }));
+    $("#openCart").onclick=openCart; $("#closeCart").onclick=closeCart; $("#cartOverlay").onclick=closeCart;
+    $("#goProducts").onclick=closeCart;
+    $("#clearCart").onclick=()=>{ cart={}; save(); };
+    $("#copyMP").onclick=async()=>{ try{ await navigator.clipboard.writeText("dailyglow.mp"); showToast("Dato de Mercado Pago copiado ✨"); }catch(e){ showToast("Mercado Pago: dailyglow.mp"); } };
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart();});
+    renderProducts(); renderCart();
+  </script>
+</body>
+</html>
